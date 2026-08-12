@@ -80,20 +80,4 @@ Sistem 3 temel modülden oluşmaktadır:
 3. **🛵 Kurye Paneli (`/#/kurye`)**
    - Hazır durumdaki siparişleri görür, teslim alır ve teslimatı onaylar. Müşteride sipariş animasyonu havai fişek patlamasıyla tamamlanır. *(Giriş: kurye / 123456)*
 
-## 🛡️ Git ve Güvenlik Notları
 
-Firebase yapısı gereği sunucuya ve veritabanına doğrudan bağlanır. Bu yüzden, `.env` dosyasını asla GitHub'a atmamalısınız. Projenin ana klasöründeki `.gitignore` dosyası bunu engeller. GitHub'a atmanız ve atmamanız gereken klasör yapısı şu şekildedir:
-
-✅ **Github'a Yüklenecekler:**
-- `frontend/src/`
-- `frontend/public/`
-- `frontend/package.json`
-- `frontend/vite.config.js`
-- `README.md`
-- `firebase.json`, `firestore.rules`
-
-❌ **Github'a Kesinlikle Yüklenmeyecekler:**
-- `.env` veya `.env.local` dosyaları (Şifre ve API key içerir)
-- `node_modules/` (Aşırı büyüktür, npm install ile indirilir)
-- `frontend/dist/` (Derlenmiş proje doyalarıdır)
-- `.firebase/` (Lokal önbellek dosyaları)
